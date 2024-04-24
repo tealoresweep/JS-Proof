@@ -1,0 +1,45 @@
+// First is to declare a variable `NFTs` to store our NFTs as an array.
+// Additionally, declare an array `NFTs` to store the NFT objects.
+let totalNFTs = 0;
+const NFTs = [];
+
+// Next, define the `mintNFT` function which takes parameters: name, eyeColor, Show, and Gender.
+// Inside the function, create a new object `NFT` that holds the NFT metadata provided as arguments.
+// Then, push this `NFT` object into the `NFTs` array.
+function mintNFT(name, eyeColor, Show, Gender) {
+    const NFT = {
+        name: name,
+        eyeColor: eyeColor,
+        Show: Show,
+        Gender: Gender
+    };
+    NFTs.push(NFT);
+    totalNFTs++; // Increment the total number of NFTs
+    console.log("Minted: " + name);
+}
+
+// Define the `listNFTs` function which iterates through the `NFTs` array and logs the metadata of each NFT.
+function listNFTs() {
+    NFTs.forEach((nft, index) => {
+        console.log("\nID: \t\t" + (index + 1));
+        console.log("Name: \t\t" + nft.name);
+        console.log("Eye Color: \t" + nft.eyeColor);
+        console.log("Show: \t\t" + nft.Show);
+        console.log("Gender: \t" + nft.Gender);
+    });
+}
+
+// Define the `getTotalSupply` function which logs the total number of NFTs that have been minted.
+function getTotalSupply() {
+    console.log("\nTotal NFTs: " + totalNFTs);
+}
+
+// Call your functions below this line
+mintNFT("Sheldon", "Blue", "BBT/Young Sheldon", "Male");
+mintNFT("Katniss", "Gray", "Hunger Games", "Female");
+mintNFT("Chandler", "Steel Blue", "Friends", "Male");
+mintNFT("Barbie", "Blue", "Barbie", "Female");
+mintNFT("Mr. Darcy", "Brown", "Pride and Prejudice", "Male");
+
+listNFTs(); // Display the list of minted NFTs
+getTotalSupply(); // Display the total number of minted NFTs
