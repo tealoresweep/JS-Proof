@@ -1,4 +1,4 @@
-// First is to declare a variable `NFTs` to store our NFTs as an array.
+// First, declare a variable `totalNFTs` to keep track of the total number of NFTs
 // Additionally, declare an array `NFTs` to store the NFT objects.
 let totalNFTs = 0;
 const NFTs = [];
